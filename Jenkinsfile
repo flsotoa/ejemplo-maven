@@ -34,7 +34,7 @@ pipeline {
 			stage('Sleep') {
                 steps {
                     dir('C:\\Users\\Flavio\\Downloads\\Downloads\\Universidad\\DiplomadoDevOpsUSACH\\Clases\\Unidad_3\\ejemplo-maven') {
-                        sh 'sleep 10'
+                        sh 'sleep 30'
                     }
                 }
             }
