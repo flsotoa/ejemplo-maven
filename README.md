@@ -1,6 +1,6 @@
 # Getting Started
 
-Prubea Jenkins 
+Prueba Jenkins 
 
 ## Windows
 
