@@ -1,6 +1,6 @@
 # Getting Started
 
-Prueba Jenkins 
+git a jenkins
 
 ## Windows
 
