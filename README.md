@@ -1,6 +1,6 @@
 # Getting Started
 
-Mod 03-12 v2
+Mod 03-12 v3
 
 ## Windows
 
