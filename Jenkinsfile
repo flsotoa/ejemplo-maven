@@ -1,8 +1,6 @@
 pipeline {
     agent any
-
     stages {
-        
             stage('Compile') {
                 steps {
                     {
@@ -23,27 +21,27 @@ pipeline {
                         sh 'mvn.cmd clean package -e'
                     }
                 }
-			}
-			stage('SonarQube analysis') {
+	    }
+	    stage('SonarQube analysis') {
 				withSonarQubeEnv(installationName: 'sonar-fsa') {
 				sh 'mvn org.sonarsource.scanner.maven:sonar-maven-plugin:3.7.0.1746:sonar'
 				}
             }
-			stage('Run Jar') {
+	    stage('Run Jar') {
                 steps {
                     {
                         sh 'mvn spring-boot:run &'
                     }
                 }
             }
-			stage('Sleep') {
+	    stage('Sleep') {
                 steps {
                     {
                         sh 'sleep 100'
                     }
                 }
             }
-			stage('Testing_aplication') {
+	    stage('Testing_aplication') {
                 steps {
                     {
                         sh 'curl -X GET http://localhost:8081/rest/mscovid/test?msg=testing'
